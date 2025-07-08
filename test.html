@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.taiwanlottery.com/favicon.ico" type="image/x-icon" />
+    <title>彩券模擬器</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./testStyle.css">
+    <link rel="stylesheet" href="./moneyRain.css">
+</head>
+
+<body>
+    <div id="moneyRain"></div>
+    <!-- 過年音樂播放器 -->
+        <div id="audioBox">
+            <p>🎵 來點新年音樂</p>
+            <audio id="bgMusic" src="./GongXiFaCai.mp3" controls
+                preload="auto" loop></audio>
+        </div>
+    <h1>彩券模擬器</h1>
+    
+    <h3>請選擇要投注的彩券：</h3>
+    <button onclick="playGame('power')">
+        <img src="https://www.taiwanlottery.com/images/logo/super_lotto638.svg" alt="威力彩">
+    </button>
+    <button onclick="playGame('lotto')">
+        <img src="https://www.taiwanlottery.com/images/logo/lotto649.svg" alt="大樂透">
+    </button>
+    <button onclick="playGame('539')">
+        <img src="https://www.taiwanlottery.com/images/logo/daily_cash.svg" alt="今彩539">
+    </button>
+    <button onclick="clearHistory()">清空紀錄</button>
+    <div class="result" id="result"></div>
+    <!-- 開獎紀錄表格 -->
+    <h2>開獎紀錄</h2>
+    <nav class="breadcrumb">
+        <button type="button" class="crumb active" onclick="setFilter('all')">全部</button>
+        <button type="button" class="crumb" onclick="setFilter('威力彩')">威力彩</button>
+        <button type="button" class="crumb" onclick="setFilter('大樂透')">大樂透</button>
+        <button type="button" class="crumb" onclick="setFilter('今彩539')">今彩539</button>
+    </nav>
+
+    <!-- table 加 麵包屑 -->
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>期數</th>
+                <th>遊戲名稱</th>
+                <th>排序前（第1區）</th>
+                <th>排序後（第1區）</th>
+                <th>第二區號碼</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <!-- JS -->
+    <script src="./test.js"></script>
+    <script src="./moneyRain.js"></script>
+    <img id="cornerGif" src="https://media.tenor.com/ger0WV_a2WMAAAAj/happy-cat.gif" alt="happy cat" />
+    <footer>2025 彩券模擬器 | 學生作業僅供參考</footer>
+    <audio id="soundBtn" src="./bloop.mp3" preload="auto"></audio>
+    <audio id="soundClear" src="./error-sound.mp3"></audio>
+    
+<button id="topBtn" title="回到最上面">↑ TOP</button>
+</body>
+
+
+
+</html>

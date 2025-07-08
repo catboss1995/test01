@@ -1,0 +1,154 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 2em;
+    background: #fafafa;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 70px; /* 預留footer空間 */
+}
+
+#audioBox{
+    margin:1em 0;
+    color:#000000;
+    font-weight:bold;
+    font-size:1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 讓內容靠右 */
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+    background: #df8b73;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px #e6be9a88;
+    padding: 0.5em 1em;
+    gap: 0.5em;
+}
+#bgMusic {
+    width: 350px;  /* 播放器寬度，可調整 */
+    height: 50px;  /* 高度根據瀏覽器略有不同 */
+}
+/*按鈕樣式實驗*/
+button {
+    padding: 0.6em 1.6em; /* 上下左右內邊距 */
+    font-size: 1.1em;  /* 字體大小 */
+    margin-right: 1em; /* 右邊距離 */
+    border-width: 0.3em; solid #000000; /* 邊框寬度 . 黑色邊框 */
+    border-radius: 1.5em;   /* 圓角 */
+    color: #000000; /* 深色文字 */
+    cursor: pointer; /* 鼠標變手型 */
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s; /* 過渡效果 */
+    box-shadow: 0 2px 8px #a5a48f77; /* 陰影 */
+    display: inline-flex;   /* 讓圖片和文字在同一行 */
+    align-items: center; /* 垂直對齊 */
+    gap: 0.4em;            /* 圖片和文字間距 */
+}
+button img {
+    height: 2em;
+    vertical-align: middle; /* 圖片垂直對齊 */
+    margin-right: 0.2em; /* 圖片右邊距離 */
+}
+button:hover {
+    background: #ffdb3b; /* 懸停時背景變亮 */
+    color: #000000; /* 懸停時文字變深 */
+    box-shadow: 0 4px 16px #2b2b2b77; /* 懸停時陰影變大 */
+}
+.result {
+    margin: 2em 0;
+    font: 1.2em monospace; /* 使用等寬字體 */
+}
+
+table {
+    border-collapse: collapse; /* 合併邊框 */
+    width: 70%; /* 寬度 */
+    
+}
+/* 標題行樣式 */
+th { 
+    background: #ffeb94; /* 標題行背景色 */
+    color: #333; /* 標題文字顏色 */
+    padding: 0.5em; /* 標題行內邊距 */
+    font-weight: bold; /* 粗體字 */
+}
+th, td {
+    border: 1px solid #ccc; /* 單元格邊框 */
+    padding: 0.5em; /* 單元格內邊距 */
+    text-align: center; /* 文字居中 */
+}
+
+/* 改加麵包屑 */
+.breadcrumb {
+    margin-bottom: 1em;
+}
+/* 麵包屑容器樣式 */
+.crumb { 
+    background: #ececec;
+    border: none;
+    color: #888;
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+    margin-right: 0.5em;
+    border-radius: 1em;
+    cursor: pointer; 
+    transition: background 0.2s, color 0.2s;
+}
+/* 麵包屑按鈕樣式 */
+.crumb.active, .crumb:hover { 
+    background: #ffd800;
+    color: #8e6400;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #eedc8f88;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #f6f6f6;
+    color: #888;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    border-top: 1px solid #eee;
+    z-index: 99;
+}
+/* 回到頂部按鈕 */
+#topBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 90px;  /* 要避開 footer 可以調整 */
+    z-index: 2000;
+    background: #ffd800;
+    color: #624a00;
+    font-weight: bold;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0 2px 8px #e0d76066;
+    padding: 0.7em 1.2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: none; /* 預設隱藏 */
+    transition: opacity 0.3s;
+}
+
+#topBtn.show {
+    display: block;
+    opacity: 1;
+}
+#cornerGif {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 350px;   /* 調整大小 */
+    height: auto;
+    z-index: 3000;  /* 要比 footer 還大，才不會被擋住 */
+    pointer-events: none; /* 不擋滑鼠點擊 */
+    user-select: none;
+}
