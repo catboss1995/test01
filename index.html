@@ -32,15 +32,19 @@
         <img src="https://www.taiwanlottery.com/images/logo/daily_cash.svg" alt="今彩539">
     </button>
     <button onclick="clearHistory()">清空紀錄</button>
+
     <div class="result" id="result"></div>
+
     <!-- 開獎紀錄表格 -->
     <h2>開獎紀錄</h2>
+    
     <nav class="breadcrumb">
         <button type="button" class="crumb active" onclick="setFilter('all')">全部</button>
         <button type="button" class="crumb" onclick="setFilter('威力彩')">威力彩</button>
         <button type="button" class="crumb" onclick="setFilter('大樂透')">大樂透</button>
         <button type="button" class="crumb" onclick="setFilter('今彩539')">今彩539</button>
     </nav>
+    
 
     <!-- table 加 麵包屑 -->
     <table id="historyTable">

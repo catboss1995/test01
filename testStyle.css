@@ -59,6 +59,7 @@ button:hover {
     box-shadow: 0 4px 16px #2b2b2b77; /* 懸停時陰影變大 */
 }
 .result {
+    width: 350px;
     margin: 2em 0;
     font: 1.2em monospace; /* 使用等寬字體 */
 }
@@ -117,7 +118,7 @@ footer {
     font-size: 1em;
     letter-spacing: 0.1em;
     border-top: 1px solid #eee;
-    z-index: 99;
+    z-index: 99; 
 }
 /* 回到頂部按鈕 */
 #topBtn {
